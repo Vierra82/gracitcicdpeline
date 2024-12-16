@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vera Aidoo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Vera Aidoo - Portfolio</h1>
+        <p>DevOps Enthusiast | AWS Cloud Engineer | Software Developer</p>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <h2>Welcome to GracIT Solutions!</h2>
+                    <p>Hello, I am Vera Aidoo, the CEO of GracIT Solutions. I am thrilled to welcome you to this space, where innovation, technology, and passion for cloud solutions come together.
+                    <p>At GracIT Solutions, we specialize in empowering businesses to embrace the full potential of DevOps and cloud computing. My journey as a DevOps engineer, AWS enthusiast, and software developer has equipped me with the expertise to lead teams in delivering scalable, efficient, and innovative solutions.</p>
+                       With expertise in automation tools, containerization, and CI/CD pipelines, I aim to enhance system performance and reliability. My background includes building scalable applications, troubleshooting complex systems, and collaborating with teams to deliver optimal solutions.
+                </p>
+                    </p>
+                    <p>
+                        I am committed to lifelong learning, with a focus on leveraging technology to solve real-world challenges. When I'm not coding, you'll find me exploring innovative DevOps practices or mentoring aspiring tech enthusiasts.
+                    <p>
+                        Whether you are here to learn about my background, explore collaborative opportunities, or dive into the impactful work we do, I’m delighted to have you. Let’s create something exceptional together!
+                    </p>
+                </div>
+                <div class="home-images">
+                    <img src="Images/Vera_Image.PNG" alt="Vera working on a DevOps project">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I am Vera Aidoo, an AWS DevOps Engineer with a background in software development and cloud computing...</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Linux</li>
+                <li>Networking</li>
+                <li>AWS Cloud</li>
+                <!-- Add more as needed -->
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of my projects...</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Here is a summary of my professional experience...</p>
+        </section>
+
+        <!-- Contact Form Section: UNTOUCHED -->
+        <section id="contact">
+            <div class="contact-container">
+                <!-- Left side: Form -->
+                <div class="contact-form">
+                    <h2>Get In Touch</h2>
+                    <div class="header-ruler"></div> <!-- Ruler under the header -->
+                    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="clearForm(event)">
+                        <input type="hidden" name="access_key" value="298a7dc5-d0e2-45db-a279-4ebf0ec95cfa">
+                        
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                
+                        <div class="button-container">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+        
+                <!-- Right side: Image -->
+                <div class="contact-image">
+                    <img src="Images/right_img.png" alt="Contact Us Image">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vera Aidoo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        showSection('home');
+    </script>
+
+    <script>
+        function clearForm(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const form = event.target;
+            
+            // Simulate form submission (to retain functionality if using a backend)
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Clear the form fields
+                    form.reset();
+                    alert("Your message has been sent successfully!");
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error submitting the form.");
+            });
+        }
+    </script>
+    
+</body>
+</html>
