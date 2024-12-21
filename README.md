@@ -8,7 +8,8 @@ This workflow streamlined the process of syncing website updates to the hosting 
 **Repository Integration**: The pipeline is triggered upon every code push to the main branch, ensuring that the latest changes are deployed immediately.
 
 **AWS Integration**: Configured GitHub Secrets to securely manage AWS credentials for seamless interaction with the S3 bucket.
-Custom Actions: Installed and utilized the AWS CLI to automate the synchronization of repository files with an S3 bucket (gracit.click) located in the eu-west-2 region.
+
+**Custom Actions:** Installed and utilized the AWS CLI to automate the synchronization of repository files with an S3 bucket (gracit.click) located in the eu-west-2 region.
 Infrastructure as Code: Built the workflow using a YAML configuration file that ensures consistency, repeatability, and transparency in deployment processes.
 
 **YAML Workflow Highlights:**
