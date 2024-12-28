@@ -26,12 +26,15 @@ By creating this pipeline, I enhanced the reliability and speed of website updat
 **Explanation of the GitHub Actions Workflow**
 This GitHub Actions workflow automates the process of syncing the contents of the repository with an Amazon S3 bucket. Here's a breakdown of its key components:
 
+
 **Workflow Name: Sync with S3**
 
 The workflow is named Sync with S3 to describe its primary purpose: syncing the repository files with an S3 bucket.
+
 **Trigger Event: push**
 
 The workflow triggers automatically when changes are pushed to the main branch. This ensures the S3 bucket is always up-to-date with the latest changes in the repository.
+
 **Job: sync**
 
 A single job named sync is defined, which runs on the latest Ubuntu runner (ubuntu-latest).
@@ -46,11 +49,13 @@ The AWS Command Line Interface (CLI) is essential for interacting with AWS servi
 The script downloads and installs the latest version of the AWS CLI using the official installer.
 The --update flag ensures compatibility by updating any preexisting AWS CLI installation on the runner.
 A verification command (aws --version) confirms successful installation.
+
 **Sync with S3:**
 
 This step uses the aws s3 sync command to upload the repository files to the specified S3 bucket (s3://gracit.click/).
 Environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION) securely provide the necessary AWS credentials and region. These values are stored as GitHub Secrets for security.
 Skills Demonstrated
+
 **DevOps Practices:**
 
 Automation of tasks using GitHub Actions to enhance efficiency and reliability.
@@ -60,13 +65,17 @@ Continuous Deployment principles by keeping the S3 bucket updated with repositor
 
 Proficiency in AWS services, particularly Amazon S3 and AWS CLI.
 Understanding of secure access management using AWS credentials stored as GitHub Secrets.
+
 **Linux Command Line:**
 
 Usage of commands like curl, unzip, and sudo to install and manage software on Linux-based systems.
+
 **Problem-Solving:**
 
 Addressing issues like preinstalled AWS CLI conflicts by using the --update flag.
+
 **How This Workflow Benefits Employers**
+
 **Automation:** Reduces manual effort and ensures the deployment process is consistent and error-free.
 
 **Security:** Demonstrates secure handling of sensitive credentials using GitHub Secrets.
